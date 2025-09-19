@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Pricing — Quote guide</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f2937'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='28' fill='white'%3EQG%3C/text%3E%3C/svg%3E">
+  </head>
+  <body class="bg-white text-slate-900 antialiased">
+    <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-100">
+      <div class="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-slate-900 text-white grid place-items-center font-extrabold">QG</div>
+          <span class="font-semibold text-lg tracking-tight">Quote guide</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/" class="hover:text-primary-600 transition">Home</a>
+          <a href="/builder.html" class="hover:text-primary-600 transition">Quotation</a>
+          <a href="/invoice.html" class="hover:text-primary-600 transition">Invoice</a>
+          <a href="/pricing.html" class="text-primary-700 font-semibold">Pricing</a>
+          <a href="/about.html" class="hover:text-primary-600 transition">About</a>
+          <a href="/contact.html" class="hover:text-primary-600 transition">Contact</a>
+        </nav>
+        <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden">
+      <div class="fixed inset-0 bg-black bg-opacity-50" id="mobile-menu-backdrop"></div>
+      <div class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu-panel">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-xl bg-primary-600 text-white grid place-items-center font-extrabold">QG</div>
+              <span class="font-semibold text-lg">Quote guide</span>
+            </div>
+            <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-slate-100 transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-4">
+            <a href="/" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Home</a>
+            <a href="/builder.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Quotation Builder</a>
+            <a href="/invoice.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Invoice Builder</a>
+            <a href="/pricing.html" class="block py-3 px-4 rounded-lg bg-slate-100 transition font-medium">Pricing</a>
+            <a href="/about.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">About</a>
+            <a href="/contact.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Contact</a>
+          </nav>
+          <div class="mt-8 pt-6 border-t border-slate-200">
+            <a href="/builder.html" class="block w-full text-center py-3 px-4 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition mb-3">
+              Try quotation builder
+            </a>
+            <a href="/invoice.html" class="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 font-medium hover:bg-slate-50 transition">
+              Try invoice builder
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-6 py-12">
+      <h1 class="text-3xl font-bold tracking-tight">Simple pricing</h1>
+      <p class="mt-2 text-slate-600">Start free. Export professional quotes anytime.</p>
+
+      <div class="grid md:grid-cols-3 gap-6 mt-10">
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <h2 class="font-semibold">Free</h2>
+          <p class="text-3xl font-bold mt-2">$0</p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Unlimited builder usage</li>
+            <li>One-page PDF export</li>
+            <li>Popular field templates</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200 ring-2 ring-primary-200">
+          <h2 class="font-semibold">Pro</h2>
+          <p class="text-3xl font-bold mt-2">$9<span class="text-base font-normal text-slate-500">/mo</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Custom branding</li>
+            <li>Saved templates</li>
+            <li>Multi-currency support</li>
+          </ul>
+        </div>
+        <div class="p-6 rounded-2xl border border-slate-200">
+          <h2 class="font-semibold">Teams</h2>
+          <p class="text-3xl font-bold mt-2">$29<span class="text-base font-normal text-slate-500">/mo</span></p>
+          <ul class="mt-4 space-y-2 text-sm text-slate-600">
+            <li>Collaboration</li>
+            <li>Approvals workflow</li>
+            <li>Shared templates</li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="mt-12 p-8 rounded-2xl bg-slate-50 border border-slate-200 text-center">
+        <h2 class="text-xl font-semibold mb-3">Start building today</h2>
+        <p class="text-slate-600 mb-6">No signup required. Create professional quotes and invoices instantly.</p>
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <a href="/builder.html" class="inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-slate-800 transition">
+            Try quotation builder
+          </a>
+          <a href="/invoice.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-300 px-5 py-3 text-sm font-semibold hover:bg-slate-50 transition">
+            Try invoice builder
+          </a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="border-t border-slate-100">
+      <div class="max-w-5xl mx-auto px-6 py-10 flex items-center justify-between">
+        <div class="flex items-center gap-3">
+          <div class="h-8 w-8 rounded-xl bg-primary-600 text-white grid place-items-center font-extrabold">QG</div>
+          <span class="text-sm text-slate-600">© <span id="year"></span> Quote guide</span>
+        </div>
+        <div class="text-sm text-slate-500 flex items-center gap-6">
+          <a href="/" class="hover:text-slate-700">Home</a>
+          <a href="/builder.html" class="hover:text-slate-700">Quotation</a>
+          <a href="/invoice.html" class="hover:text-slate-700">Invoice</a>
+          <a href="/pricing.html" class="hover:text-slate-700">Pricing</a>
+          <a href="/about.html" class="hover:text-slate-700">About</a>
+          <a href="/contact.html" class="hover:text-slate-700">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/app.js"></script>
+    <script>
+      // Mobile menu functionality
+      document.addEventListener('DOMContentLoaded', function(){
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+        function openMobileMenu() {
+          mobileMenu.classList.remove('hidden');
+          setTimeout(() => {
+            mobileMenuPanel.classList.remove('translate-x-full');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+          mobileMenuPanel.classList.add('translate-x-full');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+          }, 300);
+        }
+
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', openMobileMenu);
+        }
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        if (mobileMenuBackdrop) {
+          mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('nav a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+      });
+    </script>
+  </body>
+  </html>
+
+

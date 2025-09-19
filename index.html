@@ -1,0 +1,290 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Quote guide — Professional Quotation Builder</title>
+    <meta name="description" content="Quote guide is a professional quotation building platform for any type of business. Create, review, and export one-page PDF quotes with exceptional UI/UX.">
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%231f2937'/%3E%3Ctext x='50%' y='50%' dominant-baseline='middle' text-anchor='middle' font-family='Inter, Arial, sans-serif' font-size='28' fill='white'%3EQG%3C/text%3E%3C/svg%3E">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="/assets/css/styles.css">
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui'] },
+            colors: {
+              primary: {
+                50: '#eef6ff', 100: '#d9ecff', 200: '#b7dbff', 300: '#8ac3ff', 400: '#5ca6ff',
+                500: '#3b82f6', 600: '#2e6add', 700: '#2655b5', 800: '#214795', 900: '#1e3a78'
+              }
+            }
+          }
+        }
+      }
+    </script>
+  </head>
+  <body class="bg-white text-slate-900 antialiased">
+    <header class="sticky top-0 z-30 bg-white/70 backdrop-blur border-b border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <div class="h-9 w-9 rounded-xl bg-primary-600 text-white grid place-items-center font-extrabold">QG</div>
+          <span class="font-semibold text-lg tracking-tight">Quote guide</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-8 text-sm">
+          <a href="/" class="hover:text-primary-600 transition">Home</a>
+          <a href="/pricing.html" class="hover:text-primary-600 transition">Pricing</a>
+          <a href="/about.html" class="hover:text-primary-600 transition">About</a>
+          <a href="/contact.html" class="hover:text-primary-600 transition">Contact</a>
+        </nav>
+        <div class="flex items-center gap-3">
+          <a href="/builder.html" class="hidden sm:inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-4 py-2 text-sm font-medium shadow-sm hover:bg-slate-800 transition">
+            Build a quote
+          </a>
+          <a href="/invoice.html" class="hidden sm:inline-flex items-center gap-2 rounded-xl border border-slate-300 px-4 py-2 text-sm font-medium hover:bg-slate-50 transition">
+            Create invoice
+          </a>
+          <button id="mobile-menu-button" class="md:hidden p-2 rounded-lg hover:bg-slate-100 transition">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Overlay -->
+    <div id="mobile-menu" class="fixed inset-0 z-50 hidden md:hidden">
+      <div class="fixed inset-0 bg-black bg-opacity-50" id="mobile-menu-backdrop"></div>
+      <div class="fixed top-0 right-0 h-full w-80 bg-white shadow-xl transform translate-x-full transition-transform duration-300 ease-in-out" id="mobile-menu-panel">
+        <div class="p-6">
+          <div class="flex items-center justify-between mb-8">
+            <div class="flex items-center gap-3">
+              <div class="h-8 w-8 rounded-xl bg-primary-600 text-white grid place-items-center font-extrabold">QG</div>
+              <span class="font-semibold text-lg">Quote guide</span>
+            </div>
+            <button id="mobile-menu-close" class="p-2 rounded-lg hover:bg-slate-100 transition">
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+              </svg>
+            </button>
+          </div>
+          <nav class="space-y-4">
+            <a href="/" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition font-medium">Home</a>
+            <a href="/builder.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Quotation Builder</a>
+            <a href="/invoice.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Invoice Builder</a>
+            <a href="/pricing.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Pricing</a>
+            <a href="/about.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">About</a>
+            <a href="/contact.html" class="block py-3 px-4 rounded-lg hover:bg-slate-100 transition">Contact</a>
+          </nav>
+          <div class="mt-8 pt-6 border-t border-slate-200">
+            <a href="/builder.html" class="block w-full text-center py-3 px-4 rounded-xl bg-slate-900 text-white font-medium hover:bg-slate-800 transition mb-3">
+              Build a quote
+            </a>
+            <a href="/invoice.html" class="block w-full text-center py-3 px-4 rounded-xl border border-slate-300 font-medium hover:bg-slate-50 transition">
+              Create invoice
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <main>
+      <section class="relative overflow-hidden">
+        <div class="absolute inset-0 -z-10">
+          <div class="absolute -top-24 -right-24 h-72 w-72 rounded-full bg-primary-200 blur-3xl opacity-60"></div>
+          <div class="absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-primary-100 blur-3xl opacity-60"></div>
+        </div>
+        <div class="max-w-7xl mx-auto px-6 pt-20 pb-16 grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <h1 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight">
+              Create professional quotations in minutes
+            </h1>
+            <p class="mt-6 text-lg text-slate-600 leading-relaxed max-w-xl">
+              Quote guide helps freelancers and businesses of all sizes craft clean, one-page, professional quotations. Select your field, answer a few smart questions, and export a polished PDF.
+            </p>
+            <div class="mt-10 flex flex-wrap items-center gap-4">
+              <a href="/builder.html" class="inline-flex items-center gap-2 rounded-xl bg-primary-600 text-white px-5 py-3 text-sm font-semibold shadow-sm hover:bg-primary-700 transition">
+                Start building your quote
+              </a>
+              <a href="/invoice.html" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:border-slate-300 transition">
+                Create an invoice
+              </a>
+              <a href="#features" class="inline-flex items-center gap-2 rounded-xl border border-slate-200 px-5 py-3 text-sm font-semibold hover:border-slate-300 transition">
+                Explore features
+              </a>
+            </div>
+            <div class="mt-8 flex items-center gap-6 text-xs text-slate-500">
+              <div class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-emerald-500"></span> No signup required</div>
+              <div class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-primary-500"></span> PDF export</div>
+              <div class="flex items-center gap-2"><span class="h-2.5 w-2.5 rounded-full bg-amber-500"></span> Smart estimates</div>
+            </div>
+          </div>
+          <div class="relative">
+            <div class="rounded-2xl border border-slate-200 shadow-xl overflow-hidden bg-white">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1920&auto=format&fit=crop" alt="Quotation preview" class="w-full h-80 object-cover">
+              <div class="p-6">
+                <div class="flex items-center justify-between">
+                  <div>
+                    <p class="text-xs uppercase tracking-wider text-slate-400">Preview</p>
+                    <p class="font-semibold">One-page professional quotation</p>
+                  </div>
+                  <a href="/builder.html" class="text-primary-600 text-sm font-semibold hover:underline">Try it →</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="features" class="py-20 border-t border-slate-100">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-3 gap-10">
+          <div class="p-8 rounded-2xl border border-slate-200 hover:shadow-md transition">
+            <div class="h-10 w-10 rounded-xl bg-primary-600/10 text-primary-700 grid place-items-center mb-4">💼</div>
+            <h3 class="font-semibold text-lg">Any field of work</h3>
+            <p class="text-slate-600 mt-2">From software to carpentry to consulting—type your field or pick a suggestion.</p>
+          </div>
+          <div class="p-8 rounded-2xl border border-slate-200 hover:shadow-md transition">
+            <div class="h-10 w-10 rounded-xl bg-primary-600/10 text-primary-700 grid place-items-center mb-4">🤖</div>
+            <h3 class="font-semibold text-lg">Smart estimation</h3>
+            <p class="text-slate-600 mt-2">Answer tailored questions. We estimate time, materials, and a fair market rate.</p>
+          </div>
+          <div class="p-8 rounded-2xl border border-slate-200 hover:shadow-md transition">
+            <div class="h-10 w-10 rounded-xl bg-primary-600/10 text-primary-700 grid place-items-center mb-4">🧾</div>
+            <h3 class="font-semibold text-lg">One‑page PDF</h3>
+            <p class="text-slate-600 mt-2">Review, refine, and export a clean, single‑page quotation your clients will love.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="py-16">
+        <div class="max-w-4xl mx-auto px-6 text-center">
+          <h2 class="text-2xl md:text-3xl font-bold">Ready to impress your next client?</h2>
+          <p class="text-slate-600 mt-3">Build a tailored quote in less than 5 minutes.</p>
+          <a href="/builder.html" class="mt-8 inline-flex items-center gap-2 rounded-xl bg-slate-900 text-white px-6 py-3 text-sm font-semibold shadow-sm hover:bg-slate-800 transition">Create a quotation</a>
+        </div>
+      </section>
+      
+    </main>
+
+    <footer class="border-t border-slate-100">
+      <div class="max-w-7xl mx-auto px-6 py-12">
+        <div class="grid md:grid-cols-4 gap-8 mb-8">
+          <div>
+            <div class="flex items-center gap-3 mb-4">
+              <div class="h-8 w-8 rounded-xl bg-primary-600 text-white grid place-items-center font-extrabold">QG</div>
+              <span class="font-semibold text-lg">Quote guide</span>
+            </div>
+            <p class="text-sm text-slate-600">Professional quotation and invoice builder for freelancers and businesses.</p>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-3">Tools</h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="/builder.html" class="hover:text-slate-900">Quotation Builder</a></li>
+              <li><a href="/invoice.html" class="hover:text-slate-900">Invoice Builder</a></li>
+              <li><a href="/review.html" class="hover:text-slate-900">Sample Quotation</a></li>
+              <li><a href="/invoice-review.html" class="hover:text-slate-900">Sample Invoice</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-3">Company</h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="/about.html" class="hover:text-slate-900">About</a></li>
+              <li><a href="/pricing.html" class="hover:text-slate-900">Pricing</a></li>
+              <li><a href="/contact.html" class="hover:text-slate-900">Contact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h3 class="font-semibold text-sm mb-3">Resources</h3>
+            <ul class="space-y-2 text-sm text-slate-600">
+              <li><a href="/pricing.html" class="hover:text-slate-900">Free Plan</a></li>
+              <li><a href="/contact.html" class="hover:text-slate-900">Support</a></li>
+              <li><a href="/about.html" class="hover:text-slate-900">How it works</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pt-6 border-t border-slate-200 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div class="text-sm text-slate-500">© <span id="year"></span> Quote guide. All rights reserved.</div>
+          <div class="text-sm text-slate-500 flex items-center gap-6">
+            <a href="/about.html" class="hover:text-slate-700">About</a>
+            <a href="/pricing.html" class="hover:text-slate-700">Pricing</a>
+            <a href="/contact.html" class="hover:text-slate-700">Contact</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="/assets/js/app.js"></script>
+    <script src="/assets/js/rates.js"></script>
+    <script src="/assets/js/builder.js"></script>
+    <script>
+      // Mobile menu functionality
+      document.addEventListener('DOMContentLoaded', function(){
+        const mobileMenuButton = document.getElementById('mobile-menu-button');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const mobileMenuClose = document.getElementById('mobile-menu-close');
+        const mobileMenuBackdrop = document.getElementById('mobile-menu-backdrop');
+        const mobileMenuPanel = document.getElementById('mobile-menu-panel');
+
+        function openMobileMenu() {
+          mobileMenu.classList.remove('hidden');
+          setTimeout(() => {
+            mobileMenuPanel.classList.remove('translate-x-full');
+          }, 10);
+          document.body.style.overflow = 'hidden';
+        }
+
+        function closeMobileMenu() {
+          mobileMenuPanel.classList.add('translate-x-full');
+          setTimeout(() => {
+            mobileMenu.classList.add('hidden');
+            document.body.style.overflow = '';
+          }, 300);
+        }
+
+        if (mobileMenuButton) {
+          mobileMenuButton.addEventListener('click', openMobileMenu);
+        }
+        if (mobileMenuClose) {
+          mobileMenuClose.addEventListener('click', closeMobileMenu);
+        }
+        if (mobileMenuBackdrop) {
+          mobileMenuBackdrop.addEventListener('click', closeMobileMenu);
+        }
+
+        // Close menu when clicking on navigation links
+        const mobileNavLinks = mobileMenu.querySelectorAll('nav a');
+        mobileNavLinks.forEach(link => {
+          link.addEventListener('click', closeMobileMenu);
+        });
+
+        // Intercept builder submit to render inline preview and avoid navigation
+        const form = document.getElementById('builder-form');
+        if (!form) return;
+        form.addEventListener('submit', function(e){
+          e.preventDefault();
+          const state = QG.loadState('qg_quote');
+          if (state && state.estimate) {
+            QG.renderReview(state);
+            document.getElementById('quote-preview').scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        });
+        const dl = document.getElementById('download-pdf');
+        if (dl) {
+          dl.addEventListener('click', function(){
+            const preview = document.getElementById('quote-preview');
+            const state = QG.loadState('qg_quote');
+            const filename = `Quote_${(state?.field || 'Quotation').replace(/\s+/g,'_')}.pdf`;
+            QG.generatePDF(preview, filename);
+          });
+        }
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.10.1/dist/html2pdf.bundle.min.js"></script>
+  </body>
+  </html>
+
+
