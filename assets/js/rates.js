@@ -1,0 +1,62 @@
+// Country- and category-specific baseline hourly rates in local currency.
+// Sources blended from public benchmarks (e.g., ILO/OECD/BLS) and normalized heuristics.
+// These are indicative, NOT contractual. Update as needed.
+(function(){
+  window.QG = window.QG || {};
+  QG.countryRates = {
+    'United States': { currency: 'USD', software: 95, trades: 65, creative: 75, consulting: 140, generic: 55 },
+    'Canada': { currency: 'CAD', software: 110, trades: 70, creative: 80, consulting: 160, generic: 60 },
+    'United Kingdom': { currency: 'GBP', software: 70, trades: 45, creative: 50, consulting: 110, generic: 40 },
+    'Ireland': { currency: 'EUR', software: 80, trades: 45, creative: 55, consulting: 120, generic: 40 },
+    'France': { currency: 'EUR', software: 75, trades: 40, creative: 50, consulting: 115, generic: 38 },
+    'Germany': { currency: 'EUR', software: 80, trades: 45, creative: 55, consulting: 125, generic: 40 },
+    'Netherlands': { currency: 'EUR', software: 85, trades: 45, creative: 55, consulting: 130, generic: 42 },
+    'Spain': { currency: 'EUR', software: 55, trades: 30, creative: 35, consulting: 85, generic: 28 },
+    'Italy': { currency: 'EUR', software: 60, trades: 35, creative: 40, consulting: 90, generic: 30 },
+    'Portugal': { currency: 'EUR', software: 45, trades: 25, creative: 30, consulting: 70, generic: 22 },
+    'Poland': { currency: 'PLN', software: 150, trades: 90, creative: 110, consulting: 250, generic: 80 },
+    'Czechia': { currency: 'CZK', software: 1400, trades: 800, creative: 1000, consulting: 2400, generic: 700 },
+    'Sweden': { currency: 'SEK', software: 900, trades: 550, creative: 650, consulting: 1400, generic: 500 },
+    'Denmark': { currency: 'DKK', software: 700, trades: 430, creative: 520, consulting: 1100, generic: 400 },
+    'Norway': { currency: 'NOK', software: 900, trades: 600, creative: 700, consulting: 1500, generic: 520 },
+    'Switzerland': { currency: 'CHF', software: 110, trades: 70, creative: 85, consulting: 180, generic: 60 },
+    'Australia': { currency: 'AUD', software: 110, trades: 75, creative: 85, consulting: 160, generic: 60 },
+    'New Zealand': { currency: 'NZD', software: 110, trades: 70, creative: 80, consulting: 150, generic: 55 },
+    'Japan': { currency: 'JPY', software: 9000, trades: 5500, creative: 6500, consulting: 15000, generic: 5000 },
+    'South Korea': { currency: 'KRW', software: 95000, trades: 60000, creative: 75000, consulting: 160000, generic: 52000 },
+    'China': { currency: 'CNY', software: 220, trades: 120, creative: 160, consulting: 380, generic: 100 },
+    'Singapore': { currency: 'SGD', software: 90, trades: 55, creative: 70, consulting: 140, generic: 50 },
+    'Hong Kong': { currency: 'HKD', software: 600, trades: 350, creative: 450, consulting: 900, generic: 320 },
+    'Taiwan': { currency: 'TWD', software: 1700, trades: 1000, creative: 1200, consulting: 2800, generic: 900 },
+    'Malaysia': { currency: 'MYR', software: 120, trades: 70, creative: 90, consulting: 200, generic: 60 },
+    'Thailand': { currency: 'THB', software: 900, trades: 550, creative: 700, consulting: 1500, generic: 500 },
+    'Vietnam': { currency: 'VND', software: 400000, trades: 250000, creative: 320000, consulting: 650000, generic: 200000 },
+    'Philippines': { currency: 'PHP', software: 900, trades: 550, creative: 700, consulting: 1500, generic: 500 },
+    'Indonesia': { currency: 'IDR', software: 250000, trades: 150000, creative: 180000, consulting: 400000, generic: 130000 },
+    'India': { currency: 'INR', software: 1500, trades: 600, creative: 900, consulting: 3000, generic: 500 },
+    'Pakistan': { currency: 'PKR', software: 3500, trades: 1800, creative: 2500, consulting: 6000, generic: 1500 },
+    'Bangladesh': { currency: 'BDT', software: 1800, trades: 900, creative: 1300, consulting: 3200, generic: 800 },
+    'Sri Lanka': { currency: 'LKR', software: 5000, trades: 2500, creative: 3500, consulting: 9000, generic: 2000 },
+    'Nepal': { currency: 'NPR', software: 1800, trades: 900, creative: 1200, consulting: 3000, generic: 800 },
+    'United Arab Emirates': { currency: 'AED', software: 250, trades: 150, creative: 200, consulting: 400, generic: 120 },
+    'Saudi Arabia': { currency: 'SAR', software: 240, trades: 140, creative: 190, consulting: 380, generic: 110 },
+    'Qatar': { currency: 'QAR', software: 260, trades: 150, creative: 200, consulting: 420, generic: 120 },
+    'Kuwait': { currency: 'KWD', software: 28, trades: 16, creative: 22, consulting: 46, generic: 14 },
+    'Bahrain': { currency: 'BHD', software: 26, trades: 15, creative: 21, consulting: 44, generic: 13 },
+    'Oman': { currency: 'OMR', software: 25, trades: 15, creative: 20, consulting: 42, generic: 12 },
+    'South Africa': { currency: 'ZAR', software: 600, trades: 350, creative: 450, consulting: 900, generic: 300 },
+    'Nigeria': { currency: 'NGN', software: 18000, trades: 10000, creative: 14000, consulting: 35000, generic: 9000 },
+    'Kenya': { currency: 'KES', software: 3500, trades: 2000, creative: 2500, consulting: 6000, generic: 1800 },
+    'Egypt': { currency: 'EGP', software: 450, trades: 260, creative: 320, consulting: 800, generic: 220 },
+    'Morocco': { currency: 'MAD', software: 220, trades: 120, creative: 160, consulting: 380, generic: 110 },
+    'Ghana': { currency: 'GHS', software: 150, trades: 85, creative: 110, consulting: 250, generic: 70 },
+    'Brazil': { currency: 'BRL', software: 110, trades: 65, creative: 80, consulting: 160, generic: 55 },
+    'Argentina': { currency: 'ARS', software: 14000, trades: 8000, creative: 10000, consulting: 20000, generic: 7000 },
+    'Chile': { currency: 'CLP', software: 40000, trades: 23000, creative: 30000, consulting: 60000, generic: 20000 },
+    'Colombia': { currency: 'COP', software: 90000, trades: 50000, creative: 70000, consulting: 150000, generic: 45000 },
+    'Peru': { currency: 'PEN', software: 85, trades: 50, creative: 65, consulting: 130, generic: 45 },
+    'Mexico': { currency: 'MXN', software: 450, trades: 250, creative: 320, consulting: 700, generic: 220 }
+  };
+})();
+
+
