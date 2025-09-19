@@ -1,0 +1,6 @@
+/* Custom tweaks on top of Tailwind. Keep minimal. */
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+::selection { background: rgba(59,130,246,0.2); }
+
+
